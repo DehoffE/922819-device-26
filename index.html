@@ -8,7 +8,7 @@
 	<!-- Шапка страницы -->
 	<header class="page-header">
 		<!-- Логотип -->
-		<a class="logo" href="#">
+		<a class="header-logo" href="#">
 			<img src="img/device.svg" width="163" height="35">
 		</a>
 		
@@ -18,14 +18,18 @@
 			<form action="#" method="get">
 				<input class="menu__search-field" type="text" placeholder="Поиск по сайту">
 			</form>
-			<ul class="user-block menu__user-block">
-				<li class="user-block__item">
-					<button class="user-block__login" type="button">Войти</button>
+			<ul class="user-bar menu__user-block">
+				<li class="user-bar__item">
+					<button class="user-bar__login" type="button">Войти</button>
 				</li>
 			</ul>
 			<ul class="cart-controls menu__cart-controls">
-				<li class="cart-controls__compare">Сравнить</li>
-				<li class="cart-controls__show-cart">Корзина</li>
+				<li class="cart-controls__item">
+					<button class="cart-controls__compare" type="button">Сравнить</button>
+				</li>
+				<li class="cart-controls__item">
+					<button class="cart-controls__show-cart" type="button">Корзина</button>
+				</li>
 			</ul>
 		</section>
 		
@@ -145,40 +149,42 @@
 			</ul>
 		</section>
 		
-		<!-- О нас -->
-		<section class="about-us">
-			<h2 class="about-us__title">О нас</h2>
-			<p class="about-us__text">
-				Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-			</p>
-			<p class="about-us__text">
-				Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
-			</p>
-			<ul class="about-us__delivery-list">
-				<li class="about-us__delivery-item">Деловые Линии</li>
-				<li class="about-us__delivery-item">Автотрейдинг</li>
-				<li class="about-us__delivery-item">ЖелДорЭкспедиция</li>
-			</ul>
-			<a class="btn">Подробнее о нас</a>
-		</section>
-		
-		<!-- Контакты -->
-		<section class="contacts">
-			<h2 class="contacts__title">Контакты</h2>
-			<p class="contacts__text">
-				Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
-			</p>
-			<a class="contacts__map-link" href="#">
-				<img class="contacts__map-img" src="img/map-jpg.jpg" width="560" height="222">
-			</a>
-			<button class="btn" type="button">Напишите нам</button>
-		</section>
+		<div class="section-row-wrap">
+			<!-- О нас -->
+			<section class="about-us">
+				<h2 class="about-us__title">О нас</h2>
+				<p class="about-us__text">
+					Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+				</p>
+				<p class="about-us__text">
+					Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+				</p>
+				<ul class="about-us__delivery-list">
+					<li class="about-us__delivery-item">Деловые Линии</li>
+					<li class="about-us__delivery-item">Автотрейдинг</li>
+					<li class="about-us__delivery-item">ЖелДорЭкспедиция</li>
+				</ul>
+				<a class="btn" href="#">Подробнее о нас</a>
+			</section>
+			
+			<!-- Контакты -->
+			<section class="contacts">
+				<h2 class="contacts__title">Контакты</h2>
+				<p class="contacts__text">
+					Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+				</p>
+				<a class="contacts__map-link" href="#">
+					<img class="contacts__map-img" src="img/map-jpg.jpg" width="560" height="222">
+				</a>
+				<button class="btn" type="button">Напишите нам</button>
+			</section>
+		</div>
 	</main>
 	
 	<!-- Подвал сайта -->
 	<footer class="page-footer">
 		<!-- Логотип -->
-		<a class="logo" href="#">
+		<a class="footer-logo" href="#">
 			<img src="img/device.svg" width="163" height="35">
 		</a>
 		
@@ -191,8 +197,12 @@
 				</li>
 			</ul>
 			<ul class="cart-controls menu__cart-controls">
-				<li class="cart-controls__compare">Сравнить</li>
-				<li class="cart-controls__show-cart">Корзина</li>
+				<li class="cart-controls__item">
+					<button class="cart-controls__compare" type="button">Сравнить</button>
+				</li>
+				<li class="cart-controls__item">
+					<button class="cart-controls__show-cart" type="button">Корзина</button>
+				</li>
 			</ul>
 		</section>
 		
