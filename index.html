@@ -15,12 +15,12 @@
 		<!-- Главное меню -->
 		<section class="menu">
 			<h2 class="visually-hidden">Меню</h2>
-			<form action="#" method="get">
+			<form action="https://echo.htmlacademy.ru" method="get">
 				<input class="menu__search-field" type="text" placeholder="Поиск по сайту">
 			</form>
-			<ul class="user-bar menu__user-block">
-				<li class="user-bar__item">
-					<button class="user-bar__login" type="button">Войти</button>
+			<ul class="user-block menu__user-block">
+				<li class="user-block__item">
+					<button class="user-block__login" type="button">Войти</button>
 				</li>
 			</ul>
 			<ul class="cart-controls menu__cart-controls">
@@ -50,14 +50,13 @@
 			</ul>
 			
 			<!-- Выпадающее меню -->
-			<section class="dropdown">
-				<h2 class="visually-hidden">Каталог товаров</h2>
+			<div class="dropdown">
 				<ul class="dropdown__list">
 					<li class="dropdown__item">
 						<a class="dropdown__link" href="#">Виртуальная реальность</a>
 					</li>
 					<li class="dropdown__item">
-						<a class="dropdown__link" href="#">Моноподы для селфи</a>
+						<a class="dropdown__link" href="catalog.html">Моноподы для селфи</a>
 					</li>
 					<li class="dropdown__item">
 						<a class="dropdown__link" href="#">Экшн-камеры</a>
@@ -72,8 +71,9 @@
 						<a class="dropdown__link" href="#">Квадрокоптеры</a>
 					</li>
 				</ul>
-			</section>
+			</div>
 		</nav>
+		
 	</header>
 	
 	<!-- Основное содержание -->
@@ -82,28 +82,71 @@
 		
 		<!-- Промо слайдер -->
 		<div class="slider">
-			<div class="product-card slider__product-card">
-				<span class="product-card__number">01</span>
-				<img class="product-card__img" src="img/slider-1-png.png" alt="Самая длинная селфи-палка" width="384" height="486">
-				<h2 class="product-card__lead-title">
-					Делай селфи, 
-					как Бен Стиллер! </h2>
-				<p class="product-card__lead-text">
-					Самая длинная палка для селфи доступна в нашем магазине.
-					Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-				</p>
-				<a class="btn" href="#">Подробнее</a>
-				<dl class="product-card__characters-list">
-					<dt class="characters-list__key">Длина палки</dt>
-					<dd class="characters-list__value">8,5 м</dd>
-					<dt class="characters-list__key">Вес палки</dt>
-					<dd class="characters-list__value">5 кг</dd>
-					<dt class="characters-list__key">Материал</dt>
-					<dd class="characters-list__value">Карбон</dd>
-				</dl>
-			</div>
+			<ul class="slider__list">
+				<li class="slider__item">
+					<div class="product-card slider__product-card">
+						<span class="product-card__number">01</span>
+						<img class="product-card__img" src="img/slider-1-png.png" alt="Самая длинная селфи-палка" width="384" height="486">
+						<h2 class="product-card__lead-title">
+							Делай селфи, 
+							как Бен Стиллер! </h2>
+						<p class="product-card__lead-text">
+							Самая длинная палка для селфи доступна в нашем магазине.<br>
+							Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+						</p>
+						<a class="btn" href="#">Подробнее</a>
+						<dl class="product-card__characters-list">
+							<dt class="characters-list__key">Длина палки</dt>
+							<dd class="characters-list__value">8,5 м</dd>
+							<dt class="characters-list__key">Вес палки</dt>
+							<dd class="characters-list__value">5 кг</dd>
+							<dt class="characters-list__key">Материал</dt>
+							<dd class="characters-list__value">Карбон</dd>
+						</dl>
+					</div>
+				</li>
+				<li class="slider__item">
+					<div class="product-card slider__product-card">
+						<span class="product-card__number">02</span>
+						<img class="product-card__img" src="img/slider-2-png.png" alt="Фитнес-браслет" width="345" height="485">
+						<h2 class="product-card__lead-title">
+							Худеем<br>
+							правильно!</h2>
+						<p class="product-card__lead-text">
+							Мотивирующие фитнес-браслеты помогут найти в себе силы<br> 
+							не пропускать занятия и соблюдать диету.
+						</p>
+						<a class="btn" href="#">Подробнее</a>
+						<dl class="product-card__characters-list">
+							<dt class="characters-list__key">Без подзарядки</dt>
+							<dd class="characters-list__value">48 часов</dd>
+							
+						</dl>
+					</div>
+				</li>
+				<li class="slider__item">
+					<div class="product-card slider__product-card">
+						<span class="product-card__number">03</span>
+						<img class="product-card__img" src="img/slider-3-png.png" alt="Квадрокоптер" width="526" height="334">
+						<h2 class="product-card__lead-title">
+							Порхает как бабочка,<br>
+							жалит как пчела!</h2>
+						<p class="product-card__lead-text">
+							Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
+							мощным лазером, замаскированным под стандартную камеру.
+						</p>
+						<a class="btn" href="#">Подробнее</a>
+						<dl class="product-card__characters-list">
+							<dt class="characters-list__key">Дальность полета</dt>
+							<dd class="characters-list__value">800 м</dd>
+							<dt class="characters-list__key">Радиус поражения</dt>
+							<dd class="characters-list__value">50 м</dd>
+						</dl>
+					</div>
+				</li>
+			</ul>
 			
-			<!-- Кнопки переключения -->
+			<!-- Кнопки переключения слайдера -->
 			<div class="slider__controls">
 				<input class="slider__controls-item" type="radio">
 				<input class="slider__controls-item" type="radio">
@@ -117,7 +160,7 @@
 				<a href="#">Виртуальная реальность</a>
 			</li>
 			<li class="catalog__item">
-				<a href="#">Моноподы для селфи</a>
+				<a href="catalog.html">Моноподы для селфи</a>
 			</li>
 			<li class="catalog__item">
 				<a href="#">Экшн-камеры</a>
@@ -199,7 +242,7 @@
 					Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
 				</p>
 				<a class="contacts__map-link" href="#">
-					<img class="contacts__map-img" src="img/map-jpg.jpg" width="560" height="222">
+					<img class="contacts__map-img" src="img/map-jpg.jpg" alt="Карта с нашим адресом" width="560" height="222">
 				</a>
 				<button class="btn" type="button">Напишите нам</button>
 			</section>
@@ -210,7 +253,7 @@
 	<footer class="page-footer">
 		<!-- Логотип -->
 		<a class="footer-logo" href="#">
-			<img src="img/device.svg" width="163" height="35">
+			<img src="img/device--gold.svg" width="163" height="35">
 		</a>
 		
 		<!-- Меню -->
@@ -262,9 +305,39 @@
 		</ul>
 		
 		<!-- Копирайт -->
-		<a class="copyright" href="#">
-			HTML Academy
+		<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+			<img class="copyright__logo" src="img/..." alt="Логотип HTML Academy" width="27" height="35">
 		</a>
 	</footer>
+	
+	<!-- Написать нам (модальное окно) -->
+	<section class="modal write-us">
+		<h2 class="visually-hidden">Написать нам</h2>
+		<form class="write-us__form" action="#" method="post">
+			<label class="write-us__name-label">
+				Ваше имя:<br>
+				<input class="write-us__name-field" name="name" type="text">
+			</label>
+			<label class="write-us__email-label">
+				Ваш e-mail:<br>
+				<input class="write-us__email-field" name="email" type="email">
+			</label>
+			<label class="write-us__text-label">
+				Текст письма:<br>
+				<textarea class="write-us__text-field" name="text">В свободной форме</textarea>
+			</label>
+			<button class="btn" type="submit">Отправить</button>
+		</form>
+		<button class="modal__close-btn" type="button">Закрыть</button>
+	</section>
+	
+	<!-- Как нас найти (модальное окно) -->
+	<section class="modal find-us">
+		<h2 class="visually-hidden">Как до нас добраться?</h2>
+		<a class="find-us__map-link" href="https://yandex.ru/maps/213/moscow/?ll=37.529655%2C55.686980&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.529655%252C55.686981%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520%25D0%25A1%25D1%2582%25D1%2580%25D0%25BE%25D0%25B8%25D1%2582%25D0%25B5%25D0%25BB%25D0%25B5%25D0%25B9%252C%252015%2520&z=16">
+			<img class="find-us__map-img" src="img/map-big-jpg.jpg" alt="Наш адрес: город Москва, улица Строителей, дом 15" width="960" height="559">
+		</a>
+		<button class="modal__close-btn" type="button">Закрыть</button>
+	</section>
   </body>
 </html>

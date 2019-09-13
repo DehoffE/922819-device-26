@@ -8,7 +8,7 @@
 	<!-- Шапка страницы -->
 	<header class="page-header">
 		<!-- Логотип -->
-		<a class="logo" href="#">
+		<a class="logo" href="index.html">
 			<img src="img/device.svg" width="163" height="35">
 		</a>
 		
@@ -84,14 +84,14 @@
 		<h1 class="main-title">Моноподы для селфи</h1>
 		
 		<!-- Хлебные крошки -->
-		<ul class="breadcrumps">
-			<li class="breadcrumps__item">
-				<a class="breadcrumps__link" href="#">Главная</a>
+		<ul class="breadcrumbs">
+			<li class="breadcrumbs__item">
+				<a class="breadcrumbs__link" href="#">Главная</a>
 			</li>
-			<li class="breadcrumps__item">
-				<a class="breadcrumps__link" href="#">Каталог товаров</a>
+			<li class="breadcrumbs__item">
+				<a class="breadcrumbs__link" href="#">Каталог товаров</a>
 			</li>
-			<li class="breadcrumps__item">
+			<li class="breadcrumbs__item">
 				Моноподы для селфи
 			</li>
 		</ul>
@@ -99,35 +99,35 @@
 		<!-- Фильтры -->
 		<section class="filters">
 			<h2 class="title">Фильтры:</h2>
-			<form class="filters__form" action="#" method="get">
+			<form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
 				<fieldset class="filters__cost">
 					<legend class="filters__title">
 						Стоимость
 					</legend>
-					<!-- Пока не знаю как разметить ползунок. Позже его размечу -->
+					<input type="range">
 				</fieldset>
 				<fieldset class="filters__group filters-group">
 					<legend class="filters-group__title">
 						Цвет
 					</legend>
 					<label class="filters-group__label">
-						<input class="filters-group__checkbox" type="checkbox" checked>
+						<input class="filters-group__checkbox" type="checkbox" name="black" checked>
 						Черный
 					<label>
 					<label class="filters-group__label">
-						<input type="checkbox">
+						<input type="checkbox" name="white">
 						Белый
 					<label>
 					<label class="filters-group__label">
-						<input type="checkbox" checked>
+						<input type="checkbox" name="blue" checked>
 						Синий
 					<label>
 					<label  class="filters-group__label">
-						<input type="checkbox" checked>
+						<input type="checkbox" name="red" checked>
 						Красный
 					<label>
 					<label class="filters-group__label">
-						<input type="checkbox">
+						<input type="checkbox" name="pink">
 						Розовый
 					<label>
 				</fieldset>
@@ -136,11 +136,11 @@
 						Bluetooth
 					</legend>
 					<label class="filters-group__label">
-						<input class="filters-group__radio-btn" type="radio" checked>
+						<input class="filters-group__radio-btn" type="radio" name="bluetooth" value="on" checked>
 						Есть
 					</label>
 					<label class="filters-group__label">
-						<input class="filters-group__radio-btn" type="radio">
+						<input class="filters-group__radio-btn" type="radio" name="bluetooth" value="off">
 						Нет
 					</label>
 				</fieldset>
@@ -224,8 +224,8 @@
 	</main>
 		<footer class="page-footer">
 		<!-- Логотип -->
-		<a class="logo" href="#">
-			<img src="img/device.svg" width="163" height="35">
+		<a class="footer-logo" href="index.html">
+			<img src="img/device--gold.svg" alt="Логотип Device" width="163" height="35">
 		</a>
 		
 		<!-- Меню -->
@@ -280,9 +280,39 @@
 		</ul>
 		
 		<!-- Копирайт -->
-		<a class="copyright" href="#">
-			HTML Academy
+		<a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+			<img class="copyright__logo" src="img/..." alt="Логотип HTML Academy" width="27" height="35">
 		</a>
 	</footer>
+
+	<!-- Написать нам (модальное окно) -->
+	<section class="modal write-us">
+		<h2 class="visually-hidden">Написать нам</h2>
+		<form class="write-us__form" action="#" method="post">
+			<label class="write-us__name-label">
+				Ваше имя:<br>
+				<input class="write-us__name-field" name="name" type="text">
+			</label>
+			<label class="write-us__email-label">
+				Ваш e-mail:<br>
+				<input class="write-us__email-field" name="email" type="email">
+			</label>
+			<label class="write-us__text-label">
+				Текст письма:<br>
+				<textarea class="write-us__text-field" name="text">В свободной форме</textarea>
+			</label>
+			<button class="btn" type="submit">Отправить</button>
+		</form>
+		<button class="modal__close-btn" type="button">Закрыть</button>
+	</section>
+	
+	<!-- Как нас найти (модальное окно) -->
+	<section class="modal find-us">
+		<h2 class="visually-hidden">Как до нас добраться?</h2>
+		<a class="find-us__map-link" href="https://yandex.ru/maps/213/moscow/?ll=37.529655%2C55.686980&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.529655%252C55.686981%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%2520%25D0%25A1%25D1%2582%25D1%2580%25D0%25BE%25D0%25B8%25D1%2582%25D0%25B5%25D0%25BB%25D0%25B5%25D0%25B9%252C%252015%2520&z=16">
+			<img class="find-us__map-img" src="img/map-big-jpg.jpg" alt="Наш адрес: город Москва, улица Строителей, дом 15" width="960" height="559">
+		</a>
+		<button class="modal__close-btn" type="button">Закрыть</button>
+	</section>
   </body>
 </html>
