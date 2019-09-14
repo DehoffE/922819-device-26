@@ -8,7 +8,7 @@
 	<!-- Шапка страницы -->
 	<header class="page-header">
 		<!-- Логотип -->
-		<a class="header-logo" href="#">
+		<a class="logo page-header__logo" href="#">
 			<img src="img/device.svg" width="163" height="35">
 		</a>
 		
@@ -23,18 +23,18 @@
 					<button class="user-block__login" type="button">Войти</button>
 				</li>
 			</ul>
-			<ul class="cart-controls menu__cart-controls">
-				<li class="cart-controls__item">
-					<button class="cart-controls__compare" type="button">Сравнить</button>
+			<ul class="cart-control menu__cart-controls">
+				<li class="cart-control__item">
+					<button class="cart-control__compare" type="button">Сравнить</button>
 				</li>
-				<li class="cart-controls__item">
-					<button class="cart-controls__show-cart" type="button">Корзина</button>
+				<li class="cart-control__item">
+					<button class="cart-control__show-cart" type="button">Корзина</button>
 				</li>
 			</ul>
 		</section>
 		
 		<!-- Блок навигации -->
-		<nav class="main-navigation">
+		<nav class="main-navigation header__main-navigation">
 			<h2 class="visually-hidden">Навигация</h2>
 			<button class="main-navigation__catalog-btn" type="button">Каталог товаров</button>
 			<ul class="main-navigation__list">
@@ -50,7 +50,7 @@
 			</ul>
 			
 			<!-- Выпадающее меню -->
-			<div class="dropdown">
+			<div class="dropdown main-navigation__dropdown">
 				<ul class="dropdown__list">
 					<li class="dropdown__item">
 						<a class="dropdown__link" href="#">Виртуальная реальность</a>
@@ -73,7 +73,7 @@
 				</ul>
 			</div>
 		</nav>
-		
+
 	</header>
 	
 	<!-- Основное содержание -->
@@ -148,9 +148,9 @@
 			
 			<!-- Кнопки переключения слайдера -->
 			<div class="slider__controls">
-				<input class="slider__controls-item" type="radio">
-				<input class="slider__controls-item" type="radio">
-				<input class="slider__controls-item" type="radio">
+				<input class="slider__controls-item" name="slider-btn" type="radio">
+				<input class="slider__controls-item" name="slider-btn" type="radio">
+				<input class="slider__controls-item" name="slider-btn" type="radio">
 			</div>
 		</div>
 		
@@ -179,14 +179,14 @@
 		<!-- Блок с дополнительной информацией -->
 		<section class="more-info">
 			<h2 class="visually-hidden">Дополнительная информация</h2>
-			<ul class="more-info__list">
-				<li class="more-info__item">
+			<ul class="more-info__tabs">
+				<li class="more-info__tabs-item">
 					<button class="more-info__btn_current" type="button">Доставка</button>
 				</li>
-				<li class="more-info__item">
+				<li class="more-info__tabs-item">
 					<button class="btn" type="button">Гарантия</button>
 				</li>
-				<li class="more-info__item">
+				<li class="more-info__tabs-item">
 					<button class="btn" type="button">Кредит</button>
 				</li>
 			</ul>
