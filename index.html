@@ -8,12 +8,12 @@
 	<!-- Шапка страницы -->
 	<header class="page-header">
 		<!-- Логотип -->
-		<a class="logo page-header__logo" href="#">
+		<a class="logo page-header__logo">
 			<img src="img/device.svg" width="163" height="35">
 		</a>
 		
 		<!-- Главное меню -->
-		<section class="menu">
+		<section class="menu page-header__menu">
 			<h2 class="visually-hidden">Меню</h2>
 			<form action="https://echo.htmlacademy.ru" method="get">
 				<input class="menu__search-field" type="text" placeholder="Поиск по сайту">
@@ -82,75 +82,71 @@
 		
 		<!-- Промо слайдер -->
 		<div class="slider">
-			<ul class="slider__list">
-				<li class="slider__item">
-					<div class="product-card slider__product-card">
-						<span class="product-card__number">01</span>
-						<img class="product-card__img" src="img/slider-1-png.png" alt="Самая длинная селфи-палка" width="384" height="486">
-						<h2 class="product-card__lead-title">
-							Делай селфи, 
-							как Бен Стиллер! </h2>
-						<p class="product-card__lead-text">
-							Самая длинная палка для селфи доступна в нашем магазине.<br>
-							Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-						</p>
-						<a class="btn" href="#">Подробнее</a>
-						<dl class="product-card__characters-list">
-							<dt class="characters-list__key">Длина палки</dt>
-							<dd class="characters-list__value">8,5 м</dd>
-							<dt class="characters-list__key">Вес палки</dt>
-							<dd class="characters-list__value">5 кг</dd>
-							<dt class="characters-list__key">Материал</dt>
-							<dd class="characters-list__value">Карбон</dd>
-						</dl>
-					</div>
+			<ul class="slider__cards">
+				<li class="slider__card">
+					<h2 class="slider__lead-title">
+						Делай селфи, 
+						как Бен Стиллер! 
+					</h2>
+					<p class="slider__lead-text">
+						Самая длинная палка для селфи доступна в нашем магазине.<br>
+						Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+					</p>
+					<a class="btn" href="#">Подробнее</a>
+					<dl class="slider__characters-list">
+						<dt class="slider__character-key">Длина палки</dt>
+						<dd class="slider__character-value">8,5 м</dd>
+						<dt class="slider__character-key">Вес палки</dt>
+						<dd class="slider__character-value">5 кг</dd>
+						<dt class="slider__character-key">Материал</dt>
+						<dd class="slider__character-value">Карбон</dd>
+					</dl>
+					<img class="slider__img" src="img/slider-1-png.png" alt="Самая длинная селфи-палка" width="384" height="486">
+					<span class="slider__number">01</span>
 				</li>
-				<li class="slider__item">
-					<div class="product-card slider__product-card">
-						<span class="product-card__number">02</span>
-						<img class="product-card__img" src="img/slider-2-png.png" alt="Фитнес-браслет" width="345" height="485">
-						<h2 class="product-card__lead-title">
-							Худеем<br>
-							правильно!</h2>
-						<p class="product-card__lead-text">
-							Мотивирующие фитнес-браслеты помогут найти в себе силы<br> 
-							не пропускать занятия и соблюдать диету.
-						</p>
-						<a class="btn" href="#">Подробнее</a>
-						<dl class="product-card__characters-list">
-							<dt class="characters-list__key">Без подзарядки</dt>
-							<dd class="characters-list__value">48 часов</dd>
-							
-						</dl>
-					</div>
+				<li class="slider__card">
+					<h2 class="slider__lead-title">
+						Худеем<br>
+						правильно!
+					</h2>
+					<p class="slider__lead-text">
+						Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
+						не пропускать занятия и соблюдать диету.
+					</p>
+					<a class="btn" href="#">Подробнее</a>
+					<dl class="slider__characters-list">
+						<dt class="slider__character-key">Без подзарядки</dt>
+						<dd class="slider__character-value">48 часов</dd>
+					</dl>
+					<img class="slider__img" src="img/slider-2-png.png" alt="Мотивирующий фитнес-браслет" width="345" height="485">
+					<span class="slider__number">02</span>
 				</li>
-				<li class="slider__item">
-					<div class="product-card slider__product-card">
-						<span class="product-card__number">03</span>
-						<img class="product-card__img" src="img/slider-3-png.png" alt="Квадрокоптер" width="526" height="334">
-						<h2 class="product-card__lead-title">
-							Порхает как бабочка,<br>
-							жалит как пчела!</h2>
-						<p class="product-card__lead-text">
-							Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
-							мощным лазером, замаскированным под стандартную камеру.
-						</p>
-						<a class="btn" href="#">Подробнее</a>
-						<dl class="product-card__characters-list">
-							<dt class="characters-list__key">Дальность полета</dt>
-							<dd class="characters-list__value">800 м</dd>
-							<dt class="characters-list__key">Радиус поражения</dt>
-							<dd class="characters-list__value">50 м</dd>
-						</dl>
-					</div>
+				<li class="slider__card">
+					<h2 class="slider__lead-title">
+						Порхает как бабочка,<br>
+						жалит как пчела!
+					</h2>
+					<p class="slider__lead-text">
+						Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
+						мощным лазером, замаскированным под стандартную камеру.
+					</p>
+					<a class="btn" href="#">Подробнее</a>
+					<dl class="slider__characters-list">
+						<dt class="slider__character-key">Дальность полета</dt>
+						<dd class="slider__character-value">800 м</dd>
+						<dt class="slider__character-key">Радиус поражения</dt>
+						<dd class="slider__character-value">50 м</dd>
+					</dl>
+					<img class="slider__img" src="img/slider-3-png.png" alt="Необычный квадрокоптер" width="526" height="334">
+					<span class="slider__number">03</span>
 				</li>
 			</ul>
 			
 			<!-- Кнопки переключения слайдера -->
 			<div class="slider__controls">
-				<input class="slider__controls-item" name="slider-btn" type="radio">
-				<input class="slider__controls-item" name="slider-btn" type="radio">
-				<input class="slider__controls-item" name="slider-btn" type="radio">
+				<input class="slider__control" name="slider-btn" type="radio">
+				<input class="slider__control" name="slider-btn" type="radio">
+				<input class="slider__control" name="slider-btn" type="radio">
 			</div>
 		</div>
 		
@@ -180,28 +176,46 @@
 		<section class="more-info">
 			<h2 class="visually-hidden">Дополнительная информация</h2>
 			<ul class="more-info__tabs">
-				<li class="more-info__tabs-item">
-					<button class="more-info__btn_current" type="button">Доставка</button>
+				<li class="more-info__tab">
+					<button class="more-info__btn--current" type="button">Доставка</button>
 				</li>
-				<li class="more-info__tabs-item">
+				<li class="more-info__tab">
 					<button class="btn" type="button">Гарантия</button>
 				</li>
-				<li class="more-info__tabs-item">
+				<li class="more-info__tab">
 					<button class="btn" type="button">Кредит</button>
 				</li>
 			</ul>
-			<div class="more-info__description">
-				<h3 class="more-info__title">Доставка</h3>
-				<p class="more-info__text">
-					Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-				</p>
-			</div>
+			<ul class="descriptions more-info__descriptions">
+				<li class="descriptions__item">
+					<h3 class="descriptions__title">Доставка</h3>
+					<p class="descriptions__text">
+						Мы с удовольствием доставим ваш товар прямо к вашему<br>
+						подъезду совершенно бесплатно! Ведь мы неплохо<br>
+						заработаем, поднимая его на ваш этаж.
+					</p>
+				</li>
+				<li class="descriptions__item">
+					<h3 class="descriptions__title">Гарантия</h3>
+					<p class="descriptions__text">
+						Если из-за возгорания купленного у нас товара у вас сгорит<br>
+						дом — не переживайте, мы выдадим вам новый.<br>
+						Товар, не дом, конечно же.
+					</p>
+				</li>
+				<li class="descriptions__item">
+					<h3 class="descriptions__title">Кредит</h3>
+					<p class="descriptions__text">
+						Залезть в долговую яму стало проще! Кредитные<br>
+						консультанты подберут для вас наиболее выгодные<br>
+						условия кредита. Выгодные для нашего банка, разумеется.
+					</p>
+				</li>
+			</ul>
 		</section>
 		
 		<!-- Производители -->
-		<section class="brands">
-			<h2 class="visually-hidden">Производители</h2>
-			<ul class="brands__list">
+			<ul class="brands" aria-label="Популярные бренды">
 				<li class="brands__item">
 					<img class="brands__img" src="img/logo-1-jpg.png" width="260" height="100">
 				</li>
@@ -215,7 +229,6 @@
 					<img class="brands__img" src="img/logo-4-jpg.png" width="260" height="100">
 				</li>
 			</ul>
-		</section>
 		
 		<div class="section-row-wrap">
 			<!-- О нас -->
@@ -252,7 +265,7 @@
 	<!-- Подвал сайта -->
 	<footer class="page-footer">
 		<!-- Логотип -->
-		<a class="footer-logo" href="#">
+		<a class="footer__logo">
 			<img src="img/device--gold.svg" width="163" height="35">
 		</a>
 		
