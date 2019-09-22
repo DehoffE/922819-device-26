@@ -601,8 +601,8 @@ a {
 /***********************************************/
 
 .services {
+  min-width: 1160px;
   margin-bottom: 95px;
-
   background-color: #e5e5e5;
 }
 
@@ -792,6 +792,7 @@ a {
 }
 
 .footer {
+  min-width: 1160px;
   padding-top: 60px;
   color: #fff;
   background-color: #464646;
