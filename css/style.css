@@ -654,7 +654,7 @@ a {
   padding-left: 115px;
   list-style: none;
   overflow: hidden;
-  transform: translateY(-700px);
+  transform: translateY(0px);
 }
 
 .services__description {
