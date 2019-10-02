@@ -1716,6 +1716,27 @@ img {
     margin-right: 30px;
 }
 
+.sort__button {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3);
+  background: none;
+  border: none;
+}
+
+.sort__button.current {
+  color: rgb(0, 0, 0);
+}
+
+.sort__button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort__button:active {
+  color: rgb(0, 0, 0);
+}
+
 .sort__arrows {
     margin-left: auto;
 }
@@ -1742,6 +1763,16 @@ img {
 .sort__arrows .down {
     margin-left: 15px;
     background-image: url("../img/icon-down-dir.svg");
+}
+
+.sort__arrows .up:hover,
+.sort__arrows .down:hover {
+  opacity: 0.4;
+}
+
+.sort__arrows .up:active,
+.sort__arrows .down:active {
+  opacity: 1;
 }
 
 .sort__arrows .current {
