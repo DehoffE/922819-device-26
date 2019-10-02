@@ -15,7 +15,7 @@ html {
 html,
 body {
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   font-size: 15px;
   font-weight: normal;
@@ -38,6 +38,10 @@ button {
   text-decoration: none;
   color: #000;
   cursor: pointer;
+}
+
+img {
+  max-width: 100%;
 }
 
 /************************************* СЛУЖЕБНЫЕ КЛАССЫ *********************************************/
@@ -66,7 +70,7 @@ button {
   width: 220px;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   font-size: 18px;
   line-height: 40px;
@@ -123,16 +127,149 @@ button {
 }
 
 .address {
-  font-family: "Open Sans";
+  /* Типографика */
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   font-size: 15px;
   line-height: 30px;
   font-style: normal;
 }
 
-.contacts--modal,
 .map--modal {
+  /* Блочная модель */
   display: none;
+}
+
+.contacts-modal {
+  /* Позиционирование */
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  z-index: 99;
+
+  /* Блочная модель */
+  display: none;
+  width: 960px;
+  min-height: 553px;
+  margin-left: -480px;
+  padding: 100px;
+  padding-bottom: 80px;
+
+  /* Оформление */
+  background-color: #fff;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.contacts-modal--open {
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  font-size: 0;
+  background: none;
+  border: none;
+  background-image: url("../img/modal-close.svg");
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.3;
+}
+
+.contacts-form__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.contacts-form__field {
+  margin-top: 10px;
+  width: 360px;
+  height: 50px;
+}
+
+.contacts-form label {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+}
+
+.contacts-form__field {
+  padding: 10px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.contacts-form__field:hover {
+  background-color: #eaeaea;
+}
+
+.contacts-form__field:focus {
+  background-color: #fff;
+  outline: 3px solid #f0c52e;
+}
+
+.contacts-form__field:invalid {
+  background-color: #f6dada;
+}
+
+.contacts-form__field::-webkit-input-placeholder {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.contacts-form__field:-moz-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.contacts-form__field:-ms-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.contacts-form__field--big {
+  width: 100%;
+  min-height: 150px;
+  resize: none;
+}
+
+.contacts-modal__button {
+  margin-top: 50px;
+}
+
+.map-modal {
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  z-index: 100;
+  display: none;
+  margin-left: -480px;
+  width: 960px;
+  height: 559px;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.map-modal--open {
+  display: block;
 }
 
 /***************************************** ШАПКА ************************************/
@@ -168,12 +305,12 @@ button {
   top: -18px;
 }
 
-.header__logotype:hover {
+.logotype:hover {
   /* Оформление */
   opacity: 0.6;
 }
 
-.header__logotype:active {
+.logotype:active {
   /* Оформление */
   opacity: 0.3;
 }
@@ -183,17 +320,19 @@ button {
 .menu {
   /* Блочная модель */
   display: flex;
+  align-items: center;
   margin-bottom: 36px;
 }
 
 .search {
   /* Блочная модель */
   margin-left: 3px;
-  margin-right: 240px;
+  margin-right: 95px;
 }
 
 .search__input {
   /* Блочная модель */
+  width: 356px;
   padding-left: 35px;
 
   /* Типографика */
@@ -211,7 +350,7 @@ button {
 
 .search__input::-webkit-input-placeholder {
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   font-size: 15px;
   line-height: 30px;
@@ -220,7 +359,7 @@ button {
 
 .search__input:-ms-input-placeholder {
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   font-size: 15px;
   line-height: 30px;
@@ -228,7 +367,7 @@ button {
 }
 
 .search__input:-moz-placeholder {
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   font-size: 15px;
   line-height: 30px;
@@ -264,7 +403,7 @@ button {
   padding-right: 20px;
 
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   font-size: 15px;
   line-height: 40px;
@@ -311,7 +450,7 @@ button {
 
 .user-menu__link {
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
 
   /* Оформление */
@@ -421,7 +560,7 @@ button {
   margin: 0;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
 
   /* Оформление */
@@ -486,14 +625,17 @@ button {
 
 .dropdown {
   /* Позиционирование */
-  position: relative;
+  position: absolute;
+  left: 0;
   z-index: 20;
 
   /* Блочная модель */
   display: none;
+  padding-left: 59px;
+  width: 100%;
 
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
 
   /* Оформление */
@@ -661,7 +803,7 @@ button {
   margin-bottom: 18px;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bolder;
   font-size: 47px;
   line-height: 56px;
@@ -686,7 +828,7 @@ button {
   display: flex;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 100;
 }
 
@@ -726,7 +868,7 @@ button {
   z-index: -1;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bolder;
   font-size: 179px;
   line-height: 179px;
@@ -755,7 +897,7 @@ button {
   margin: 0;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   font-size: 18px;
   line-height: 24px;
@@ -897,7 +1039,7 @@ button {
   padding-right: 130px;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3.6px;
@@ -981,7 +1123,7 @@ button {
   margin-bottom: 35px;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   font-size: 47px;
   line-height: 47px;
@@ -993,7 +1135,7 @@ button {
   width: 450px;
 
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   font-size: 15px;
   line-height: 30px;
@@ -1074,7 +1216,7 @@ button {
   margin-bottom: 40px;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   font-size: 47px;
   line-height: 48px;
@@ -1087,22 +1229,34 @@ button {
   margin-bottom: 40px;
 
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 100;
 }
 
 .about-us__delivery-companies {
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   list-style: circle;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.about-us__delivery-companies span {
+  color: #000;
+  font-size: 15px;
 }
 
 .about-us__button,
 .contacts__button {
   /* Блочная модель */
   margin-top: 40px;
+}
+
+.contacts__map {
+  background: none;
+  border: none;
 }
 
 .footer {
@@ -1223,7 +1377,7 @@ button {
 
 .telephone a {
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   color: #fff;
 }
@@ -1241,12 +1395,20 @@ button {
   margin-left: auto;
 }
 
+.copyright:hover {
+  opacity: 0.6;
+}
+
+.copyright:active {
+  opacity: 0.3;
+}
+
 .footer-navigation__list {
   /* Блочная модель */
   display: flex;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 900;
   text-transform: uppercase;
@@ -1285,7 +1447,7 @@ button {
   margin-bottom: 25px;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   font-size: 47px;
   line-height: 48px;
@@ -1306,7 +1468,7 @@ button {
   margin-right: 15px;
 
   /* Типографика */
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 100;
   font-size: 14px;
   line-height: 24px;
@@ -1337,6 +1499,14 @@ button {
 .breadcrumbs__link {
   /* Типографика */
   color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs__link:active {
+  color: rgb(0, 0, 0);
 }
 
 .products {
@@ -1378,7 +1548,7 @@ button {
   margin-bottom: 70px;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   font-size: 16px;
   line-height: 24px;
@@ -1407,7 +1577,7 @@ button {
   margin-bottom: 30px;
 
   /* Типографика */
-  font-family: "Gilroy";
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 900;
   font-size: 18px;
   line-height: 24px;
@@ -1476,6 +1646,18 @@ button {
   background-image: url("../img/radio-on.svg");
 }
 
+.filters-group label:hover::before {
+  opacity: 0.6;
+}
+
+.filters-group label:active::before {
+  opacity: 1;
+}
+
+.filters-group input:disabled + label {
+  opacity: 0.6;
+}
+
 .button--filters {
   /* Блочная модель */
   width: 200px;
@@ -1503,7 +1685,7 @@ button {
     margin-right: 55px;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 900;
     font-size: 16px;
     line-height: 24px;
@@ -1522,12 +1704,12 @@ button {
     margin-right: 30px;
 }
 
-.sort__up-down {
+.sort__arrows {
     margin-left: auto;
 }
 
-.sort__up-down .up,
-.sort__up-down .down {
+.sort__arrows .up,
+.sort__arrows .down {
     font-size: 0;
     line-height: 30px;
     padding: 0;
@@ -1536,18 +1718,22 @@ button {
     height: 10px;
     vertical-align: middle;
     background: none;
-    background-image: url("../img/icon-up-dir.svg");
     background-repeat: no-repeat;
     border: none;
-}
-
-.sort__up-down .up {
     opacity: 0.2;
 }
 
-.sort__up-down .down {
+.sort__arrows .up {
+    background-image: url("../img/icon-up-dir.svg");
+}
+
+.sort__arrows .down {
     margin-left: 15px;
     background-image: url("../img/icon-down-dir.svg");
+}
+
+.sort__arrows .current {
+    opacity: 1;
 }
 
 .products__list {
@@ -1580,17 +1766,60 @@ button {
 
 .product__title {
     margin: 0;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
 }
 
 .product__price {
     margin-left: 20px;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     white-space: nowrap;
+}
+
+.product__figure {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.product__layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+
+  background-color: rgba(196, 196, 196, 0.7);
+}
+
+.product__figure:hover .product__layout {
+  display: flex;
+}
+
+.product__layout-button {
+  background: none;
+  border: none;
+}
+
+.product__layout-button {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.product__layout-button:hover {
+  color: rgb(0, 0, 0);
+}
+
+.product__layout-button:active {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .pagination {
@@ -1600,15 +1829,15 @@ button {
     padding: 0;
     margin: 0;
     margin-left: auto;
-    margin-top: 40px;
     margin-bottom: 75px;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 3.2px;
     line-height: 70px;
     list-style: none;
+
 
     background-color: #ebebeb;
 }
@@ -1623,12 +1852,27 @@ button {
 
 .pagination__link {
     display: inline-block;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination__link:active {
+  color: rgb(0, 0, 0);
+}
+
+.pagination__link--current {
+  color: rgba(0, 0, 0);
 }
 
 .pagination__item:first-child .pagination__link,
 .pagination__item:last-child .pagination__link {
   padding-left: 30px;
   padding-right: 30px;
+
+  color: rgb(0, 0, 0);
 }
 
 .pagination__item:first-child .pagination__link:hover {

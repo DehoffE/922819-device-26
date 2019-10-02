@@ -291,9 +291,9 @@
 					Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
 				</p>
 				<ul class="about-us__delivery-companies">
-					<li class="about-us__delivery-company">Деловые Линии</li>
-					<li class="about-us__delivery-company">Автотрейдинг</li>
-					<li class="about-us__delivery-company">ЖелДорЭкспедиция</li>
+					<li class="about-us__delivery-company"><span>Деловые Линии</span></li>
+					<li class="about-us__delivery-company"><span>Автотрейдинг</span></li>
+					<li class="about-us__delivery-company"><span>ЖелДорЭкспедиция</span></li>
 				</ul>
 				<a class="button button--xl about-us__button" href="">Подробнее о нас</a>
 			</section>
@@ -304,9 +304,9 @@
 				<p class="contacts__text">
 					Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
 				</p>
-				<div class="contacts__map">
+				<button class="contacts__map" type="button">
 					<img src="img/map-jpg.jpg" alt="Карта" width="560" height="222">
-				</div>
+				</button>
 				<button class="button button--xl contacts__button" type="button">Напишите нам</button>
 			</section>
 		</div>
@@ -390,27 +390,34 @@
 	</footer>
 
 	<!-- Модальное окно: Написать нам -->
-	<div class="contacts--modal">
-		<form class="contacts--modal__form" action="https://echo.htmlacademy.ru" method="post">
-			<label for="name-field--modal">Ваше имя:</label>
-			<input class="contacts--modal__name-field" id="name-field--modal" type="text">
-			<label for="email-field--modal">Ваш e-mail:</label>
-			<input class="contacts--modal__email-field" id="email-field--modal" type="email">
-			<label for="text-field--modal">Текст письма:</label>
-			<textarea class="contacts--modal__text-field" name="text" id="text-field--modal">
-				В свободной форме
-			</textarea>
-			<button class="button" type="submit">Отправить</button>
+	<div class="contacts-modal">
+		<form class="contacts-form contacts-modal__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="contacts-form__row">
+                <div class="contacts-form__half">
+                    <label for="contacts-form__label">Ваше имя:</label>
+                    <br>
+                    <input class="contacts-form__field" id="name-field" name="name-field" type="text" placeholder="Имя и фамилия" maxl="10">
+                </div>
+                <div class="form__half">
+                    <label for="contacts-form__label">Ваш e-mail:</label>
+                    <br>
+                    <input class="contacts-form__field" id="email-field" name="email-field" type="email" placeholder="email@example.com">
+                </div>
+            </div>
+			<label for="contacts-form__label">Текст письма:</label>
+            <br>
+			<textarea class="contacts-form__field contacts-form__field--big" name="text" id="text-field--modal" placeholder="В свободной форме"></textarea>
+			<button class="button contacts-modal__button" type="submit">Отправить</button>
 		</form>
-		<button class="contacts--modal__close-button">Закрыть</button>
+		<button class="modal-close" id="modal-contacts-close">Закрыть</button>
 	</div>
 
 	<!-- Модальное окно: Карта -->
-	<div class="map--modal">
-        <a class="map--modal__link" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687034,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618?hl=ru" target="_blank">
-            <img class="map--modal__image" src="img/map-big-jpg.jpg" alt="Адрес: г. Москва, ул. Строителей д. 15" width="960" height="559">
+	<div class="map-modal">
+        <a class="map-modal__link" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687034,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618?hl=ru" target="_blank">
+            <img class="map-modal__image" src="img/map-big-jpg.jpg" alt="Адрес: г. Москва, ул. Строителей д. 15" width="960" height="559">
         </a>
-		<button class="map--modal__close-button">Закрыть</button>
+		<button class="modal-close" id="modal-map-close">Закрыть</button>
 	</div>
     <script src="js/script.js"></script>
 </body>
