@@ -1,65 +1,65 @@
-var page = {
-  buttons: {
-    dropdownShow: document.querySelector('.navigation__button'),
-    sliderControls: document.querySelectorAll('.slider-controls__button'),
-    showContactsModal: document.querySelector('.contacts__button'),
-    showMapModal: document.querySelector('.contacts__map')
-  }
+var sliderCards = document.querySelector('.slider__cards');
+var sliderControls = document.querySelectorAll('.slider-controls__button');
+var contactsModal = document.querySelector('.contacts-modal');
+var openContacts = document.querySelector('.contacts__button');
+var openMap = document.querySelector('.contacts__map');
+var mapModal = document.querySelector('.map-modal');
+var servicesButtons = document.querySelectorAll('.services__tab label');
+
+for (var i = 0; i < servicesButtons.length; i++) {
+  servicesButtons[i].addEventListener('click', function(i) {
+    var servicesList = document.querySelector('.services__descriptions');
+    return function(e) {
+      if (e.toElement.classList.contains('services__button')) {
+        return;
+      } else {
+        var current = document.querySelector('.services__button');
+        current.className = 'button button--s';
+        e.toElement.className = 'services__button';
+        servicesList.className = 'services__descriptions services__descriptions--position_' + (i + 1);
+      }
+    }
+  }(i));
 }
 
-function showContactsModal() {
-  var closeModal = document.querySelector('#modal-contacts-close');
-  var contactsModal = document.querySelector('.contacts-modal');
-  closeModal.addEventListener('click', function(){
-      contactsModal.classList.remove('contacts-modal--open');
-  });
-  contactsModal.classList.add('contacts-modal--open');
+
+
+for (var i = 0; i < sliderControls.length; i++) {
+  sliderControls[i].addEventListener('click', function(i) {
+    return function() {
+      sliderCards.className = 'slider__cards slider__cards--position_' + (i + 1);
+    }
+  }(i));
 }
 
-function showMapModal() {
-  var closeModal = document.querySelector('#modal-map-close');
-  var mapModal = document.querySelector('.map-modal');
-  closeModal.addEventListener('click', function(){
-      mapModal.classList.remove('map-modal--open');
-  });
+
+
+
+openMap.addEventListener('click', function(e) {
+  e.preventDefault();
+  var close = mapModal.querySelector('.modal-close');
   mapModal.classList.add('map-modal--open');
-}
-
-function sliderControlHandler() {
-    var slides = document.querySelector('.slider__cards');
-
-    return function(e) {
-        if (e.target === page.buttons.sliderControls[0]) {
-            slides.style.transform = 'translateY(' + 0 + 'px)';
-        } else if (e.target === page.buttons.sliderControls[1]) {
-            slides.style.transform = 'translateY(' + -600 + 'px)';
-        } else if (e.target === page.buttons.sliderControls[2]) {
-            slides.style.transform = 'translateY(' + -1200 + 'px)';
-        }
+  window.addEventListener('keydown', function(e){
+    if (e.keyCode === 27) {
+      mapModal.classList.remove('map-modal--open');
     }
-}
+  });
+  close.addEventListener('click', function() {
+    mapModal.classList.remove('map-modal--open');
+  });
+});
 
-function dropdownShowHandler() {
-    var hidden = true;
-    var dropdown = document.querySelector('.dropdown');
-
-    return function(e) {
-        if (hidden) {
-            dropdown.style.display = 'flex';
-            hidden = false;
-        } else {
-            dropdown.style.display = 'none';
-            hidden = true;
-        }
+openContacts.addEventListener('click', function() {
+  contactsModal.classList.add('contacts-modal--open');
+  var name = contactsModal.querySelector('.contacts-form__field');
+  name.focus();
+  var close = contactsModal.querySelector('.modal-close');
+  window.addEventListener('keydown', function(e){
+    if (e.keyCode === 27) {
+      contactsModal.classList.remove('contacts-modal--open');
     }
-}
-
-page.buttons.dropdownShow.addEventListener('click', dropdownShowHandler());
-
-for (var i = 0; i < page.buttons.sliderControls.length; i++) {
-    page.buttons.sliderControls[i].addEventListener('click', sliderControlHandler());
-}
-
-
-page.buttons.showContactsModal.addEventListener('click', showContactsModal);
-page.buttons.showMapModal.addEventListener('click', showMapModal);
+  });
+  close.addEventListener('click', function() {
+    contactsModal.classList.remove('contacts-modal--open');
+  });
+});
