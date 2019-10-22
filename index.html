@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Device</title>
-		<link rel="stylesheet" href="css/fonts.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.min.css">
 	</head>
 	<body class="page">
 		<!-- Шапка -->
@@ -244,7 +244,7 @@
 							<label class="button button--s" for="services__button-2">Гарантия</label>
 						</li>
 						<li class="services__tab">
-							<input type="radio" name="services__button" id="services__button-2">
+							<input type="radio" name="services__button" id="services__button-3">
 							<label class="button button--s" for="services__button-3">Кредит</label>
 						</li>
 					</ul>
@@ -418,17 +418,17 @@
 			<form class="contacts-form contacts-modal__form" name="fiedback" action="https://echo.htmlacademy.ru" method="post">
 				<div class="contacts-form__row">
 					<div class="contacts-form__half">
-						<label for="contacts-form__label">Ваше имя:</label>
+						<label for="name-field">Ваше имя:</label>
 						<br>
 						<input class="contacts-form__field" id="name-field" name="name-field" type="text" placeholder="Имя и фамилия">
 					</div>
 					<div class="form__half">
-						<label for="contacts-form__label">Ваш e-mail:</label>
+						<label for="email-field">Ваш e-mail:</label>
 						<br>
 						<input class="contacts-form__field" id="email-field" name="email-field" type="email" placeholder="email@example.com">
 					</div>
 				</div>
-				<label for="contacts-form__label">Текст письма:</label>
+				<label for="text-field--modal">Текст письма:</label>
 				<br>
 				<textarea class="contacts-form__field contacts-form__field--big" name="text" id="text-field--modal" placeholder="В свободной форме"></textarea>
 				<button class="button contacts-modal__button" type="submit">Отправить</button>
@@ -438,11 +438,9 @@
 
 		<!-- Модальное окно: Карта -->
 		<div class="map-modal">
-			<a class="map-modal__link" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687034,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618?hl=ru" target="_blank">
-				<iframe src="https://yandex.ru/map-widget/v1/-/CGgBEDOK" width="960" height="559" frameborder="0" allowfullscreen="true"></iframe>
-			</a>
+			<iframe src="https://yandex.ru/map-widget/v1/-/CGgBEDOK" width="960" height="559"></iframe>
 			<button class="modal-close" id="modal-map-close">Закрыть</button>
 		</div>
-		<script src="js/script.js"></script>
+		<script src="js/script.min.js"></script>
 	</body>
 </html>

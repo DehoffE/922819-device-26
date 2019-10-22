@@ -1,3 +1,36 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff2") format("woff2"),
+       url("../fonts/opensans.woff") format("woff"),
+       url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+       url("../fonts/opensanslight.woff") format("woff"),
+       url("../fonts/OpenSans-Light.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+       url("../fonts/gilroylight.woff") format("woff"),
+       url("../fonts/Gilroylight.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff"),
+       url("../fonts/Gilroyextrabold.ttf") format("truetype");
+  font-weight: 900;
+}
+
+
 /*************************************** БАЗОВЫЕ СТИЛИ ************************************/
 *, *::before, *::after {
 	box-sizing: inherit;
@@ -265,6 +298,10 @@ button {
 
 .map-modal--open {
 	display: block;
+}
+
+.map-modal iframe {
+	border: 0;
 }
 
 /***************************************** ШАПКА ************************************/
@@ -1705,17 +1742,17 @@ button {
 }
 
 .range__price {
-		position: absolute;
-		left: -15px;
-		bottom: -25px;
+	position: absolute;
+	left: -15px;
+	bottom: -25px;
 
-		font-family: "Gilroy";
-		font-weight: 100;
-		font-size: 14px;
-		line-height: 24px;
-		color: rgba(0, 0, 0, 0.2);
-		white-space: nowrap;
-		-webkit-user-select: none;
+	font-family: "Gilroy", "Arial", sans-serif;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.2);
+	white-space: nowrap;
+	-webkit-user-select: none;
 }
 
 .filters__title {
@@ -1975,7 +2012,7 @@ button {
 	padding-bottom: 9px;
 	width: 60px;
 	height: 60px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", "Arial", sans-serif;
 	font-weight: 900;
 	font-size: 14px;
 	letter-spacing: 0.7px;
