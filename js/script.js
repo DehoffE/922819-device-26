@@ -10,12 +10,13 @@ for (var i = 0; i < servicesButtons.length; i++) {
   servicesButtons[i].addEventListener('click', function(i) {
     var servicesList = document.querySelector('.services__descriptions');
     return function(e) {
-      if (e.toElement.classList.contains('services__button')) {
+      console.log(e.target);
+      if (e.target.classList.contains('services__button')) {
         return;
       } else {
         var current = document.querySelector('.services__button');
         current.className = 'button button--s';
-        e.toElement.className = 'services__button';
+        e.target.className = 'services__button';
         servicesList.className = 'services__descriptions services__descriptions--position_' + (i + 1);
       }
     }
@@ -49,7 +50,8 @@ openMap.addEventListener('click', function(e) {
   });
 });
 
-openContacts.addEventListener('click', function() {
+openContacts.addEventListener('click', function(e) {
+  e.preventDefault();
   contactsModal.classList.add('contacts-modal--open');
   var name = contactsModal.querySelector('.contacts-form__field');
   name.focus();
