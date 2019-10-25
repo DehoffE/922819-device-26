@@ -22,26 +22,26 @@
 					<!-- Поиск -->
 					<form class="search" action="https://echo.htmlacademy.ru" method="GET">
 						<input class="search__input" name="search-field" type="text" placeholder="Поиск по сайту"><!--
-					 --><button class="search__button" type="submit">Найти</button>
+					 --><button class="search__button" type="submit" aria-label="Найти">Найти</button>
 					</form>
 
 					<!-- Блок пользователя -->
 					<ul class="user-menu">
 						<li class="user-menu__item">
-							<a class="user-menu__link login-icon" href="profile.html">Валентин Петухов</a>
+							<a class="user-menu__link login-icon" href="profile.html" aria-label="Перейти в профиль">Валентин Петухов</a>
 						</li>
 						<li class="user-menu__item">
-							<a class="user-menu__link logout" href="logout.html">Выйти</a>
+							<a class="user-menu__link logout" href="logout.html" aria-label="Выйти">Выйти</a>
 						</li>
 					</ul>
 
 					<!-- Блок корзины -->
 					<ul class="cart-menu">
 						<li class="cart-menu__item">
-							<a class="cart-menu__link compare-icon" href="compare.html">Сравнить</a>
+							<a class="cart-menu__link compare-icon" href="compare.html" aria-label="Сравнить товары">Сравнить</a>
 						</li>
 						<li class="cart-menu__item">
-							<a class="cart-menu__link cart-icon" href="cart.html">Корзина</a>
+							<a class="cart-menu__link cart-icon" href="cart.html" aria-label="Корзина">Корзина</a>
 						</li>
 					</ul>
 				</section>
@@ -51,43 +51,43 @@
 					<h2 class="visually-hidden">Навигация</h2>
 					<ul class="navigation__list">
 						<li class="navigation__item">
-							<button class="navigation__button plus-icon" type="button">Каталог товаров</button>
+							<button class="navigation__button plus-icon" type="button" aria-label="Каталог товаров">Каталог товаров</button>
 							<section class="dropdown">
 								<h3 class="visually-hidden">Каталог товаров</h3>
 								<ul class="dropdown__list">
 									<li class="dropdown__item">
-										<a class="dropdown__link" href="">Виртуальная реальность</a>
+										<a class="dropdown__link" href="" aria-label="Виртуальная реальность">Виртуальная реальность</a>
 									</li>
 									<li class="dropdown__item">
-										<a class="dropdown__link" href="catalog.html">Моноподы для селфи</a>
+										<a class="dropdown__link" href="catalog.html" aria-label="Моноподы для селфи">Моноподы для селфи</a>
 									</li>
 									<li class="dropdown__item">
-										<a class="dropdown__link" href="">Экшн-камеры</a>
-									</li>
-								</ul>
-								<ul class="dropdown__list">
-									<li class="dropdown__item">
-										<a class="dropdown__link" href="">Фитнес-браслеты</a>
-									</li>
-									<li class="dropdown__item">
-										<a class="dropdown__link" href="">Умные часы</a>
+										<a class="dropdown__link" href="" aria-label="Экшн-камеры">Экшн-камеры</a>
 									</li>
 								</ul>
 								<ul class="dropdown__list">
 									<li class="dropdown__item">
-										<a class="dropdown__link" href="">Квадрокоптеры</a>
+										<a class="dropdown__link" href="" aria-label="Фитнес-браслеты">Фитнес-браслеты</a>
+									</li>
+									<li class="dropdown__item">
+										<a class="dropdown__link" href="" aria-label="Умные часы">Умные часы</a>
+									</li>
+								</ul>
+								<ul class="dropdown__list">
+									<li class="dropdown__item">
+										<a class="dropdown__link" href="" aria-label="Квадрокоптеры">Квадрокоптеры</a>
 									</li>
 								</ul>
 							</section>
 						</li>
 						<li class="navigation__item">
-							<a class="navigation__link" href="">Доставка</a>
+							<a class="navigation__link" href="" aria-label="Доставка">Доставка</a>
 						</li>
 						<li class="navigation__item">
-							<a class="navigation__link" href="">Гарантия</a>
+							<a class="navigation__link" href="" aria-label="Гарантия">Гарантия</a>
 						</li>
 						<li class="navigation__item">
-							<a class="navigation__link" href="">Контакты</a>
+							<a class="navigation__link" href="" aria-label="Контакты">Контакты</a>
 						</li>
 					</ul>
 				</nav>
@@ -100,10 +100,10 @@
 				<h1 class="main__title">Моноподы для селфи</h1>
 				<ul class="breadcrumbs">
 					<li class="breadcrumbs__item">
-						<a href="index.html" class="breadcrumbs__link">Главная</a>
+						<a href="index.html" class="breadcrumbs__link" aria-label="На главную">Главная</a>
 					</li>
 					<li class="breadcrumbs__item">
-						<a href="" class="breadcrumbs__link">Каталог товаров</a>
+						<a href="" class="breadcrumbs__link" aria-label="Каталог товаров">Каталог товаров</a>
 					</li>
 					<li class="breadcrumbs__item">
 						Моноподы для селфи
@@ -121,10 +121,10 @@
 								<div class="range">
 									<div class="selected">
 										<div class="thumb">
-											<span class="range__price">от 500</span>
+											<span class="range__price" aria-label="Стоимость от">от 500</span>
 										</div>
 										<div class="thumb">
-											<span class="range__price">до 1300</span>
+											<span class="range__price" aria-label="Стоимость до">до 1300</span>
 										</div>
 									</div>
 								</div>
@@ -132,27 +132,27 @@
 							<fieldset class="filters-group filters__group">
 								<h4 class="filters-group__title">Цвет</h4>
 								<input type="checkbox" name="color" value="black" id="color-black" checked>
-								<label for="color-black">Черный</label>
+								<label for="color-black" aria-label="Цвет">Черный</label>
 								<br>
 								<input type="checkbox" name="color" value="white" id="color-white">
-								<label for="color-white">Белый</label>
+								<label for="color-white" aria-label="Цвет">Белый</label>
 								<br>
 								<input type="checkbox" name="color" value="blue" id="color-blue" checked>
-								<label for="color-blue">Синий</label>
+								<label for="color-blue" aria-label="Цвет">Синий</label>
 								<br>
 								<input type="checkbox" name="color" value="red" id="color-red" checked>
-								<label for="color-red">Красный</label>
+								<label for="color-red" aria-label="Цвет">Красный</label>
 								<br>
 								<input type="checkbox" name="color" value="pink" id="color-pink">
-								<label for="color-pink">Розовый</label>
+								<label for="color-pink" aria-label="Цвет">Розовый</label>
 							</fieldset>
 							<fieldset class="filters-group filters__group">
 								<h4 class="filters-group__title">Bluetooth</h4>
 								<input type="radio" name="bluetooth" value="on" id="bluetooth-on" checked>
-								<label for="bluetooth-on">Есть</label>
+								<label for="bluetooth-on" aria-label="Bluetooth">Есть</label>
 								<br>
 								<input type="radio" name="bluetooth" value="off" id="bluetooth-off">
-								<label for="bluetooth-off">Нет</label>
+								<label for="bluetooth-off" aria-label="Bluetooth">Нет</label>
 							</fieldset>
 							<button class="button button--filters" type="submit">Показать</button>
 						</form>
@@ -162,18 +162,18 @@
 							<h3 class="sort__title">Сортировка:</h3>
 							<ul class="sort__list">
 								<li class="sort__item">
-									<button class="sort__button current" type="button">По цене</button>
+									<button class="sort__button current" type="button" aria-label="Сортировать по цене">По цене</button>
 								</li>
 								<li class="sort__item">
-									<button class="sort__button" type="button">По типу</button>
+									<button class="sort__button" type="button" aria-label="Сортировать по типу">По типу</button>
 								</li>
 								<li class="sort__item">
-									<button class="sort__button" type="button">По популярности</button>
+									<button class="sort__button" type="button" aria-label="Сортировать по популярности">По популярности</button>
 								</li>
 							</ul>
 							<div class="sort__arrows">
-								<button class="up" type="button">По возрастанию</button>
-								<button class="down current" type="button">По убыванию</button>
+								<button class="up" type="button" aria-label="По возрастанию">По возрастанию</button>
+								<button class="down current" type="button" aria-label="По убыванию">По убыванию</button>
 							</div>
 						</section>
 						<ul class="products__list">
@@ -185,8 +185,8 @@
 								<figure class="product__figure">
 									<img src="img/item-1-jpg.jpg" alt="Любительская селфи-палка" width="360" height="380">
 									<div class="product__layout">
-										<a class="button" href="">В корзину</a>
-										<button class="product__layout-button" type="button">Добавить к сравнению</button>
+										<a class="button" href="" aria-label="В корзину">В корзину</a>
+										<button class="product__layout-button" type="button" aria-label="Добавить к сравнению">Добавить к сравнению</button>
 									</div>
 								</figure>
 							</li>
@@ -198,8 +198,8 @@
 								<figure class="product__figure">
 									<img src="img/item-2-jpg.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
 									<div class="product__layout">
-										<a class="button" href="">В корзину</a>
-										<button class="product__layout-button" type="button">Добавить к сравнению</button>
+										<a class="button" href="" aria-label="В корзину">В корзину</a>
+										<button class="product__layout-button" type="button" aria-label="Добавить к сравнению">Добавить к сравнению</button>
 									</div>
 								</figure>
 							</li>
@@ -211,8 +211,8 @@
 								<figure class="product__figure">
 									<img src="img/item-3-jpg.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
 									<div class="product__layout">
-										<a class="button" href="">В корзину</a>
-										<button class="product__layout-button" type="button">Добавить к сравнению</button>
+										<a class="button" href="" aria-label="В корзину">В корзину</a>
+										<button class="product__layout-button" type="button" aria-label="Добавить к сравнению">Добавить к сравнению</button>
 									</div>
 								</figure>
 							</li>
@@ -224,15 +224,15 @@
 								<figure class="product__figure product__new">
 									<img src="img/item-4-jpg.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
 									<div class="product__layout">
-										<a class="button" href="">В корзину</a>
-										<button class="product__layout-button" type="button">Добавить к сравнению</button>
+										<a class="button" href="" aria-label="В корзину">В корзину</a>
+										<button class="product__layout-button" type="button" aria-label="Добавить к сравнению">Добавить к сравнению</button>
 									</div>
 								</figure>
 							</li>
 						</ul>
 						<ul class="pagination">
 							<li class="pagination__item pagination__prev">
-								<a class="pagination__link">Назад</a>
+								<a class="pagination__link" aria-label="Назад">Назад</a>
 							</li>
 							<li class="pagination__item">
 								<a class="pagination__link pagination__link--current">1</a>
@@ -244,7 +244,7 @@
 								<a class="pagination__link" href="catalog/page-3.html">3</a>
 							</li>
 							<li class="pagination__item pagination__next">
-								<a class="pagination__link" href="catalog/page-4.html">Вперед</a>
+								<a class="pagination__link" href="catalog/page-4.html" aria-label="Вперед">Вперед</a>
 							</li>
 						</ul>
 					</div>
@@ -265,20 +265,20 @@
 				<!-- Блок пользователя -->
 				<ul class="user-menu footer__user-menu">
 					<li class="user-menu__item login-icon login-icon--gold">
-						<a class="user-menu__link user-menu__link--color_white" href="profile.html">Валентин Петухов</a>
+						<a class="user-menu__link user-menu__link--color_white" href="profile.html" aria-label="Перейти в профиль">Валентин Петухов</a>
 					</li>
 					<li class="user-menu__item logout">
-						<a class="user-menu__link user-menu__link--color_white" href="logout.html">Выйти</a>
+						<a class="user-menu__link user-menu__link--color_white" href="logout.html" aria-label="Выйти">Выйти</a>
 					</li>
 				</ul>
 
 				<!-- Блок корзины -->
 				<ul class="cart-menu footer__cart-menu">
 					<li class="cart-menu__item compare-icon compare-icon--gold">
-						<a class="cart-menu__link cart-menu__link--color_white" href="compare.html">Сравнить</a>
+						<a class="cart-menu__link cart-menu__link--color_white" href="compare.html" aria-label="Сравнить товары">Сравнить</a>
 					</li>
 					<li class="cart-menu__item cart-icon cart-icon--gold">
-						<a class="cart-menu__link cart-menu__link--color_white" href="cart.html">Корзина</a>
+						<a class="cart-menu__link cart-menu__link--color_white" href="cart.html" aria-label="Корзина">Корзина</a>
 					</li>
 				</ul>
 			</div>
@@ -291,18 +291,18 @@
 					<h2 class="visually-hidden">Навигация</h2>
 					<ul class="footer-navigation__list">
 						<li class="footer-navigation__item">
-							<a class="footer-navigation__link" href="">Доставка</a>
+							<a class="footer-navigation__link" href="" aria-label="Доставка">Доставка</a>
 						</li>
 						<li class="footer-navigation__item">
-							<a class="footer-navigation__link" href="">Гарантия</a>
+							<a class="footer-navigation__link" href="" aria-label="Гарантия">Гарантия</a>
 						</li>
 						<li class="footer-navigation__item">
-							<a class="footer-navigation__link" href="">Контакты</a>
+							<a class="footer-navigation__link" href="" aria-label="Контакты">Контакты</a>
 						</li>
 					</ul>
 				</nav>
 
-				<span class="telephone">Тел: <a href="tel:+74954959595"> +7 (495) 495-95-95</a></span>
+				<span class="telephone">Тел: <a href="tel:+74954959595" aria-label="Позвонить нам"> +7 (495) 495-95-95</a></span>
 			</div>
 
 			<div class="footer__row footer__string">
@@ -326,7 +326,7 @@
 				</ul>
 
 				<!-- Копирайт -->
-				<a class="copyright" href="https://up.htmlacademy.ru/htmlcss/26" target="_blank">
+				<a class="copyright" href="https://up.htmlacademy.ru/htmlcss/26" target="_blank" aria-label="HTML Academy">
 					<img src="img/logo-html.svg" alt="Разработано HTML Academy" width="27" height="35">
 				</a>
 			</div>
